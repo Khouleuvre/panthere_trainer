@@ -9,6 +9,7 @@ def show_image(img, figsize=(10, 10)):
     plt.show()
 
 def create_images_folder_structure():
+  pass
   
 
 class EMADictSmoothing(object):
