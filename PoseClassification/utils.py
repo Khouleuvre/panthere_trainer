@@ -1,5 +1,6 @@
 from matplotlib import pyplot as plt
 import numpy as np
+import os
 
 
 def show_image(img, figsize=(10, 10)):
@@ -8,9 +9,44 @@ def show_image(img, figsize=(10, 10)):
     plt.imshow(img)
     plt.show()
 
+
 def create_images_folder_structure():
-  pass
-  
+    cwd = os.getcwd()
+
+    # Create the folder assets if it doesn't already exist
+    if not os.path.exists("assets"):
+        os.makedirs("assets")
+        print(f"Created directory: {os.path.join(cwd, 'assets')}")
+
+    # Create the folder assets/images if it doesn't already exist
+    if not os.path.exists("assets/images"):
+        os.makedirs("assets/images")
+        print(f"Created directory: {os.path.join(cwd, 'assets/images')}")
+    # Define the base directory relative to the script's location
+    base_dir = os.path.join("assets", "images")
+    # Folders to create inside the base directory
+    folders = ["fitness_poses_images_in", "fitness_poses_images_out"]
+    # Iterate over each folder and create it if it doesn't exist
+    for folder in folders:
+        path = os.path.join(base_dir, folder)
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Created directory: {path}")
+        else:
+            print(f"Directory already exists: {path}")
+    
+    subfolder = ["pushups_up", "pushups_down"]
+    # Now we create the sub folder for classifications
+    for folder in subfolder:
+      for _folder in folders:
+        path = os.path.join(base_dir, _folder, folder)
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Created directory: {path}")
+        else:
+            print(f"Directory already exists: {path}")
+            
+
 
 class EMADictSmoothing(object):
     """Smoothes pose classification. Exponential moving average (EMA)."""
