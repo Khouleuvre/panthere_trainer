@@ -8,6 +8,8 @@ def show_image(img, figsize=(10, 10)):
     plt.imshow(img)
     plt.show()
 
+def create_images_folder_structure():
+  
 
 class EMADictSmoothing(object):
     """Smoothes pose classification. Exponential moving average (EMA)."""
