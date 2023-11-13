@@ -31,21 +31,42 @@ def create_images_folder_structure():
         path = os.path.join(base_dir, folder)
         if not os.path.exists(path):
             os.makedirs(path)
-            print(f"Created directory: {path}")
+            # print(f"Created directory: {path}")
         else:
-            print(f"Directory already exists: {path}")
-    
+            pass
+            # print(f"Directory already exists: {path}")
+
     subfolder = ["pushups_up", "pushups_down"]
     # Now we create the sub folder for classifications
     for folder in subfolder:
-      for _folder in folders:
-        path = os.path.join(base_dir, _folder, folder)
+        for _folder in folders:
+            path = os.path.join(base_dir, _folder, folder)
+            if not os.path.exists(path):
+                os.makedirs(path)
+                # print(f"Created directory: {path}")
+            else:
+                pass
+                # print(f"Directory already exists: {path}")
+
+
+def create_docs_folder_structure():
+    cwd = os.getcwd()
+    if not os.path.exists("docs"):
+        os.makedirs("docs")
+        print(f"Created directory: {os.path.join(cwd, 'docs')}")
+        print("Copy paste here the folder of images and video from kaggle")
+
+    for folder in ["images", "videos"]:
+        path = os.path.join("docs", folder)
         if not os.path.exists(path):
             os.makedirs(path)
-            print(f"Created directory: {path}")
+            print(
+                f"Created directory: {path} --> Copy/Paste here our images from kaggles"
+            )
         else:
-            print(f"Directory already exists: {path}")
-            
+            print(
+                f"Directory already exists: {path} --> Copy/Paste here our videos from kaggles"
+            )
 
 
 class EMADictSmoothing(object):
