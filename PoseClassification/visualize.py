@@ -67,7 +67,7 @@ class PoseClassificationVisualizer(object):
                 int(output_width * self._plot_max_width),
                 int(output_height * self._plot_max_height),
             ),
-            Image.ANTIALIAS,
+            Image.Resampling.LANCZOS,
         )
         output_img.paste(
             img,
