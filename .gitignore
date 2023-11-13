@@ -3,3 +3,7 @@
 *.txt*
 *.mp4*
 /pushup_dataset/
+pushup_dataset/
+pushup_dataset (copy)/
+video_dataset/
+video_dataset copy/

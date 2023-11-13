@@ -55,5 +55,5 @@ def sort_images (root_dir, images_dir) :
 #         else:
 #             pass
 
-sort_images('/home/khaleb.dabakuyo@Digital-Grenoble.local/Documents/ACV/Panther_trainer','PoseClassification/pushup_dataset/obj')
+sort_images('/home/khaleb.dabakuyo@Digital-Grenoble.local/Documents/ACV/Panther_trainer','docs/pushup_dataset/obj')
           
