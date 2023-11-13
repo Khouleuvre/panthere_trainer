@@ -2,4 +2,6 @@
 *.jpg*
 *.txt*
 *.mp4*
-/pushup_dataset/
+/pushup_dataset
+/assets
+/docs
