@@ -23,10 +23,10 @@ def sort_images (root_dir, images_dir) :
                 image_path = ".".join(entry.split('.')[:-1])+".jpg"
                 source=os.path.join(root,image_path)
                 if classe == '0':
-                    destination= os.path.join(root_dir,"docs/images/pushups_down", image_path)
+                    destination= os.path.join(root_dir,"docs/images/test_pushups_down", image_path)
                     os.rename(source , destination)
                 elif classe == '1':
-                    destination= os.path.join(root_dir,"docs/images/pushups_up", image_path)
+                    destination= os.path.join(root_dir,"docs/images/test_pushups_up", image_path)
                     os.rename(source, destination)
                 else:
                     pass
@@ -34,8 +34,6 @@ def sort_images (root_dir, images_dir) :
             print(f"Moved {full_path} to ./docs")
         else:
             pass
-
-
             
 #   else:
 #         if full_path.endswith(".jpg"):
@@ -55,13 +53,11 @@ def sort_images (root_dir, images_dir) :
 #         else:
 #             pass
 
-sort_images('/home/khaleb.dabakuyo@Digital-Grenoble.local/Documents/ACV/Panther_trainer','docs/pushup_dataset/obj')
+sort_images('/home/khaleb.dabakuyo@Digital-Grenoble.local/Documents/ACV/Panther_trainer','docs/pushup_dataset/test')
 
 
 
-from matplotlib import pyplot as plt
-import numpy as np
-import os
+
 
 def sort_video (root_dir, images_dir) :
     # Get the list of all files and directories
