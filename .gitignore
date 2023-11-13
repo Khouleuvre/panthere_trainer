@@ -7,3 +7,8 @@ pushup_dataset/
 pushup_dataset (copy)/
 video_dataset/
 video_dataset copy/
+/pushup_dataset
+/assets
+/docs
+/fitness_poses_images_in
+/fitness_poses_images_out
