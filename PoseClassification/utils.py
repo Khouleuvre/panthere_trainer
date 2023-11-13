@@ -68,6 +68,16 @@ def create_docs_folder_structure():
                 f"Directory already exists: {path} --> Copy/Paste here our videos from kaggles"
             )
 
+def assert_images_in_folder():
+  # We check that the folder : "obj", "test" and the files cls.txt are in docs/images
+  assert os.path.exists(os.path.join("docs", "images", "obj"))
+  assert os.path.exists(os.path.join("docs", "images", "test"))
+  assert os.path.exists(os.path.join("docs", "images", "cls.txt"))
+  
+  
+
+def assert_videos_in_folder():
+  pass
 
 class EMADictSmoothing(object):
     """Smoothes pose classification. Exponential moving average (EMA)."""
